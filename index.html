@@ -16,57 +16,71 @@
     <div>
 
         <p/>
+
         <div class="card card-inverse text-xs-center" style="background-color: #1e1c49; border-color: #aaaaaa;">
             <div class="card-block">
                 <h1 class="card-title">Survey Using Hotkeys</h1>
-                <h4 class="card-title">A Demo Application</h1>
+                <h4 class="card-title">A Demo Application</h4>
             </div>
 
             <div class="card-block">
-                <p class="card-text">A prototype application illustrating how to create a survey in AngularJS that can be responded using Hotkeys.</p>
-                <!--<a href="#" class="card-link">Card link</a>-->
-                <a href="http://chieffancypants.github.io/angular-hotkeys/" class="card-link">Angular-Hotkeys</a>
+                <p class="card-text">A prototype application illustrating how to create a survey in AngularJS that can
+                    be responded using Hotkeys.</p>
+            </div>
+            <div class="actions">
+                <a class="btn btn-lg" href="https://github.com/ParimalDharane/SurveyWithHotkeys.io/">View on GitHub</a>
             </div>
         </div>
 
-
         <div class="container">
-        <p/>
-        <h4>Questions</h4>
-        <div class="alert alert-info" role="alert">
-            <strong>Help:</strong> Use Alt+Down and Alt+Up to select question. Alt+1, Alt+2, Alt+3 to select responses.
-        </div>
-        <form action="">
+             <div style="text-align: right;">
+                    <span class="card-text"><strong>Credits: </strong></span>
+                    <a href="https://angularjs.org/" class="card-link">AngularJS</a>
+                    <a href="http://getbootstrap.com/" class="card-link">Bootstrap</a>
+                    <a href="http://chieffancypants.github.io/angular-hotkeys/" class="card-link">Angular-Hotkeys</a>
+             </div>
 
-            <table class="table" hotkey="{'alt+down': nextQuestion, 'alt+up': prevQuestion, 'alt+1': select1, 'alt+2': select2, 'alt+3': select3}">
-                <!--<div ng-class="{'qselected': currQ == '0'}" ng-click="currQ=0">-->
-                <thead><tr>
-                    <th>Question</th>
-                    <th style="width: 80px;">Responses</th>
-                    <th>1</th>
-                    <th>2</th>
-                    <th class="text-center">3</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr ng-repeat="row in qList" ng-class="{'qselected': currQ == $index}">
-                    <td> {{row.question}} </td>
-                    <td >
-                        <progress class="progress" style="height: 10px; margin-top: 6px;" value="{{row.response}}" max="3" aria-describedby="example-caption-2"></progress>
-                    </td>
-                    <td> <input type="radio" ng-model="row.response" value="1">  </td>
-                    <td> <input type="radio" ng-model="row.response" value="2">  </td>
-                    <td> <input type="radio" ng-model="row.response" value="3">  </td>
-<!--
-                    <td class="text-center" ng-class="{'optselected': row.response == '1'}" > <input type="radio" ng-model="row.response" value="1">  </td>
-                    <td class="text-center" ng-class="{'optselected': row.response == '2'}" > <input type="radio" ng-model="row.response" value="2">  </td>
-                    <td class="text-center" ng-class="{'optselected': row.response == '3'}" > <input type="radio" ng-model="row.response" value="3">  </td>
--->
+            <p/>
+            <h4>Questions</h4>
 
-                </tr>
-                </tbody>
-            </table>
-        </form>
+            <div class="alert alert-info" role="alert">
+                <strong>Help:</strong> Use Alt+Down and Alt+Up to select question. Alt+1, Alt+2, Alt+3 to select
+                responses.
+            </div>
+            <form action="">
+
+                <table class="table"
+                       hotkey="{'alt+down': nextQuestion, 'alt+up': prevQuestion, 'alt+1': select1, 'alt+2': select2, 'alt+3': select3}">
+                    <!--<div ng-class="{'qselected': currQ == '0'}" ng-click="currQ=0">-->
+                    <thead>
+                    <tr>
+                        <th>Question</th>
+                        <th style="width: 80px;">Responses</th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th class="text-center">3</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="row in qList" ng-class="{'qselected': currQ == $index}">
+                        <td> {{row.question}}</td>
+                        <td>
+                            <progress class="progress" style="height: 10px; margin-top: 6px;" value="{{row.response}}"
+                                      max="3" aria-describedby="example-caption-2"></progress>
+                        </td>
+                        <td><input type="radio" ng-model="row.response" value="1"></td>
+                        <td><input type="radio" ng-model="row.response" value="2"></td>
+                        <td><input type="radio" ng-model="row.response" value="3"></td>
+                        <!--
+                                            <td class="text-center" ng-class="{'optselected': row.response == '1'}" > <input type="radio" ng-model="row.response" value="1">  </td>
+                                            <td class="text-center" ng-class="{'optselected': row.response == '2'}" > <input type="radio" ng-model="row.response" value="2">  </td>
+                                            <td class="text-center" ng-class="{'optselected': row.response == '3'}" > <input type="radio" ng-model="row.response" value="3">  </td>
+                        -->
+
+                    </tr>
+                    </tbody>
+                </table>
+            </form>
 
         </div>
     </div>
