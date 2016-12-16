@@ -1,0 +1,16 @@
+body {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.qselected {
+    background: #bbc8c3;
+    color: #ffffff;
+    border-radius: 0 0 0 0;
+}
+
+.optselected {
+    background: #76bec6;
+    color: #ffffff;
+    border-radius: 4px;
+}
