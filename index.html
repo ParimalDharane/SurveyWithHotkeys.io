@@ -58,25 +58,19 @@
                         <th style="width: 80px;">Response</th>
                         <th>1</th>
                         <th>2</th>
-                        <th class="text-center">3</th>
+                        <th>3</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr ng-repeat="row in qList" ng-class="{'qselected': currQ == $index}">
+                    <tr ng-repeat="row in qList" ng-class="{'qselected': currQ == $index}"  ng-click="setQuestion($index)">
                         <td> {{row.question}}</td>
-                        <td>
+                        <td >
                             <progress class="progress" style="height: 10px; margin-top: 6px;" value="{{row.response}}"
                                       max="3" aria-describedby="example-caption-2"></progress>
                         </td>
-                        <td><input type="radio" ng-model="row.response" value="1"></td>
-                        <td><input type="radio" ng-model="row.response" value="2"></td>
-                        <td><input type="radio" ng-model="row.response" value="3"></td>
-                        <!--
-                                            <td class="text-center" ng-class="{'optselected': row.response == '1'}" > <input type="radio" ng-model="row.response" value="1">  </td>
-                                            <td class="text-center" ng-class="{'optselected': row.response == '2'}" > <input type="radio" ng-model="row.response" value="2">  </td>
-                                            <td class="text-center" ng-class="{'optselected': row.response == '3'}" > <input type="radio" ng-model="row.response" value="3">  </td>
-                        -->
-
+                        <td><input type="radio" class="mousetrap" ng-model="row.response" value="1"></td>
+                        <td><input type="radio" class="mousetrap" ng-model="row.response" value="2"></td>
+                        <td><input type="radio" class="mousetrap" ng-model="row.response" value="3"></td>
                     </tr>
                     </tbody>
                 </table>
