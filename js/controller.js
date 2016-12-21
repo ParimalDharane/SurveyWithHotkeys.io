@@ -15,6 +15,12 @@ app.controller('mainCtrl',
             $scope.qList[$scope.currQ].response = respCode;
         };
 
+        $scope.setQuestion = function (newIndex) {
+            if(newIndex >= 0 || newIndex < $scope.qList.length) {
+                $scope.currQ = newIndex;
+            }
+        };
+
         $scope.nextQuestion = function () {
             if($scope.currQ < $scope.qList.length-1) {
                 $scope.currQ++;
